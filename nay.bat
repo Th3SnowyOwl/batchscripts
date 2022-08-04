@@ -1,4 +1,4 @@
-xcopcd out
+cd out
 mkdir inf
 mkdir lgdat
 mkdir dl
